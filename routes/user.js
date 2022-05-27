@@ -9,7 +9,7 @@ router.post("/Create", (request, response) => {
 
   // create an instance of product model
   const user = new User();
-  (user.fname = fname),
+    (user.fname = fname),
     (user.lname = lname),
     (user.email = email),
     (user.mobile = mobile),
