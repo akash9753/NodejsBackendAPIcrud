@@ -7,7 +7,7 @@ const mongoose = require('mongoose')
 const port = process.env.PORT || 4000
 
 // connect to the database
-mongoose.connect(`mongodb+srv://9753akash:9753akash@cluster0.w5uqt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`)
+mongoose.connect(`mongodb+srv://9753akash:9753akash@cluster0.w5uqt.mongodb.net/UsersReactCrud?retryWrites=true&w=majority`)
 
 const app = express()
 app.use(cors('*'))
@@ -23,10 +23,10 @@ app.get('/', (request, response) => {
 
 // add routes
 
-const routerProduct = require('./routes/product')
+const routerUser = require('./routes/user')
 
 
-app.use('/product', routerProduct)
+app.use('/user', routerUser)
 
 app.listen(port, () => {
   console.log(`server started on port ${port}`)
